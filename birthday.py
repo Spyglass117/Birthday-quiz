@@ -31,3 +31,17 @@ Example Session
   And the day? 11
   Eric, you are a fall baby of the stone age.
 """
+from datetime import datetime
+from calendar import month_name
+
+name = input("Hello, what is your name?")
+birthmonth = input("Hi {0}, what was the name of the month you were born in?".format(name))
+birthyear = input("And what year were you born in, {0}?".format(name))
+birthday = input("And the day?")
+
+month = datetime.today().month
+todayyear = datetime.today().year
+todayday = datetime.today().day
+
+todaymonth = month_name[month]
+
