@@ -1,4 +1,4 @@
-elif birthmonth == "january":
+if birthmonth == "january":
     bmonth = 1
 elif birthmonth == "february":
     bmonth = 2
