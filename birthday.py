@@ -39,9 +39,7 @@ birthmonth = input("Hi {0}, what was the name of the month you were born in?".fo
 birthyear = input("And what year were you born in, {0}?".format(name))
 birthday = input("And the day?")
 
-month = datetime.today().month
+todaymonth = datetime.today().month
 todayyear = datetime.today().year
 todayday = datetime.today().day
-
-todaymonth = month_name[month]
 
