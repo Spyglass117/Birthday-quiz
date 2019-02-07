@@ -37,8 +37,8 @@ from calendar import month_name
 #Gets variables from user
 name = input("Hello, what is your name?")
 birthmonth = str.lower(input("Hi {0}, what was the name of the month you were born in?".format(name)))
-birthyear = input("And what year were you born in, {0}?".format(name))
-birthday = input("And the day?")
+birthyear = int(input("And what year were you born in, {0}?".format(name)))
+birthday = int(input("And the day?"))
 
 #Translates user inputs into month numbers
 monthnames = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -57,5 +57,14 @@ todaymonth = datetime.today().month
 todayyear = datetime.today().year
 todayday = datetime.today().day
 
+#Checks to see if entered birthdate is in the future
+if birthyear > todayyear:
+    print("You have not been born yet!")
 
+#Checks user birth date against holidays
+elif monthlocation == 10 and birthday == 31:
+    print("You were born on Halloween!")
+elif monthlocation == 12 and birthday == 25:
+    print("You were born on Christmas!")
 
+#Checks user birth date against year and month to find "birth block"
