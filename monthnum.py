@@ -1,3 +1,5 @@
+def monthnum(birthmonth):
+
 if birthmonth == "january":
     bmonth = 1
 elif birthmonth == "february":
