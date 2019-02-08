@@ -61,10 +61,35 @@ todayday = datetime.today().day
 if birthyear > todayyear:
     print("You have not been born yet!")
 
-#Checks user birth date against holidays
+#Checks user birth date against holidays/birthday
+elif monthlocation == todaymonth and birthday == todayday:
+    print("Happy birthday!")
 elif monthlocation == 10 and birthday == 31:
     print("You were born on Halloween!")
 elif monthlocation == 12 and birthday == 25:
     print("You were born on Christmas!")
+elif monthlocation == 2 and birthday == 14:
+    print("You were born on Valentines!")
 
-#Checks user birth date against year and month to find "birth block"
+#Checks user birth date against month to find season
+elif monthlocation == 12 or monthlocation >= 1 and monthlocation <= 2:
+    season = ("winter")
+elif monthlocation >= 3 and monthlocation <= 5:
+    season = ("spring")
+elif monthlocation >= 6 and monthlocation <= 8:
+    season = ("summer")
+else:
+    season = ("fall")
+    
+#Checks user birth year
+if birthyear >= 2000:
+    generation = "two thousands"
+elif birthyear <= 1979:
+    generation = "Stone Age"
+elif birthyear >= 1980 and birthmonth <= 1989:
+    generation = "eighties"
+else:
+    generation = "nineties"
+
+print ("{0}, you are a {1} baby of the {2}.".format(name, season, generation))
+
