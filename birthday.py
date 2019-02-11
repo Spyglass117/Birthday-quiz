@@ -35,10 +35,10 @@ from datetime import datetime
 from calendar import month_name
 
 #Gets variables from user
-name = input("Hello, what is your name?")
-birthmonth = str.lower(input("Hi {0}, what was the name of the month you were born in?".format(name)))
-birthyear = int(input("And what year were you born in, {0}?".format(name)))
-birthday = int(input("And the day?"))
+name = input("Hello, what is your name? ")
+birthmonth = str.lower(input("Hi {0}, what was the name of the month you were born in? ".format(name)))
+birthyear = int(input("And what year were you born in, {0}? ".format(name)))
+birthday = int(input("And the day? "))
 printcheck = 1
 
 #Translates user inputs into month numbers
@@ -64,16 +64,16 @@ if birthyear > todayyear:
 
 #Checks user birth date against holidays/birthday
 elif monthlocation == todaymonth and birthday == todayday:
-    print("Happy birthday!")
+    print("Happy birthday! ")
     printcheck = 0
 elif monthlocation == 10 and birthday == 31:
-    print("You were born on Halloween!")
+    print("You were born on Halloween! ")
     printcheck = 0
 elif monthlocation == 12 and birthday == 25:
-    print("You were born on Christmas!")
+    print("You were born on Christmas! ")
     printcheck = 0
 elif monthlocation == 2 and birthday == 14:
-    print("You were born on Valentines!")
+    print("You were born on Valentines! ")
     printcheck = 0
 
 #Checks user birth date against month to find season
@@ -97,5 +97,5 @@ else:
     generation = "nineties"
 
 if printcheck == 1:
-    print ("{0}, you are a {1} baby of the {2}.".format(name, season, generation))
+    print ("{0}, you are a {1} baby of the {2}. ".format(name, season, generation))
 
