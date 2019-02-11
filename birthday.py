@@ -86,7 +86,7 @@ if birthyear >= 2000:
     generation = "two thousands"
 elif birthyear <= 1979:
     generation = "Stone Age"
-elif birthyear >= 1980 and birthmonth <= 1989:
+elif birthyear >= 1980 and birthyear <= 1989:
     generation = "eighties"
 else:
     generation = "nineties"
