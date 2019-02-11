@@ -39,6 +39,7 @@ name = input("Hello, what is your name?")
 birthmonth = str.lower(input("Hi {0}, what was the name of the month you were born in?".format(name)))
 birthyear = int(input("And what year were you born in, {0}?".format(name)))
 birthday = int(input("And the day?"))
+printcheck = 1
 
 #Translates user inputs into month numbers
 monthnames = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -64,15 +65,19 @@ if birthyear > todayyear:
 #Checks user birth date against holidays/birthday
 elif monthlocation == todaymonth and birthday == todayday:
     print("Happy birthday!")
+    printcheck = 0
 elif monthlocation == 10 and birthday == 31:
     print("You were born on Halloween!")
+    printcheck = 0
 elif monthlocation == 12 and birthday == 25:
     print("You were born on Christmas!")
+    printcheck = 0
 elif monthlocation == 2 and birthday == 14:
     print("You were born on Valentines!")
+    printcheck = 0
 
 #Checks user birth date against month to find season
-elif monthlocation == 12 or monthlocation >= 1 and monthlocation <= 2:
+if monthlocation == 12 or monthlocation >= 1 and monthlocation <= 2:
     season = ("winter")
 elif monthlocation >= 3 and monthlocation <= 5:
     season = ("spring")
@@ -91,5 +96,6 @@ elif birthyear >= 1980 and birthyear <= 1989:
 else:
     generation = "nineties"
 
-print ("{0}, you are a {1} baby of the {2}.".format(name, season, generation))
+if printcheck == 1:
+    print ("{0}, you are a {1} baby of the {2}.".format(name, season, generation))
 
